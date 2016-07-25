@@ -1,8 +1,11 @@
 <?php 
 require 'koneksi.php';
 
+$limit = isset($_GET['limit']) ? $_GET['limit'] : 5;
+$offset= isset($_GET['offset']) ? $_GET['offset'] : 0; 
+
 $response = [];
-$sql = "SELECT * FROM blog ORDER BY id DESC";
+$sql = "SELECT * FROM blog ORDER BY id DESC LIMIT {$offset}, {$limit}";
 $query = mysql_query($sql);
 
 while($row = mysql_fetch_object($query)):
