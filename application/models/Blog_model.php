@@ -4,7 +4,7 @@
  * @author Hikmahtiar hikmahtiar.cool@gmail.com>
  */
 class Blog_model extends CI_Model {
-    const TABLE = 'blog_bak';
+    const TABLE = 'blog';
     
     public function __construct()
     {
