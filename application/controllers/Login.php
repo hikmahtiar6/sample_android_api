@@ -3,6 +3,7 @@
  * Login Controler
  * @author Hikmahtiar hikmahtiar.cool@gmail.com>
  */
+
 class Login extends CI_Controller {
     public function __construct()
     {
@@ -19,7 +20,38 @@ class Login extends CI_Controller {
     {
         $user = $this->input->post('username');
         $pass = $this->input->post('password');
-        $response = $this->Login_model->login($user, $pass);
+        
+        if($user == '' && $pass == '')
+        {
+            $response = [
+                'message'   => "Username dan password belum diisi.",
+                'status'    => "error"
+            ];
+        }
+        else 
+        {
+            $login = $this->Login_model->login($user, $pass);
+            if($login)
+            {
+                $response = [
+                    'message'   => "Anda berhasil login.",
+                    'status'    => "success"
+                ];
+                $response['user'] = [
+                    'id'        => $login->id,
+                    'username'  => $login->username,
+                    'realname'  => $login->realname,
+                ];
+            }
+            else
+            {
+                $response = [
+                    'message'   => "Username dan password masih salah.",
+                    'status'    => "error"
+                ];
+            }
+            
+        }
         
         $this->output
         ->set_content_type('application/json')

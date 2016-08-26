@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 25, 2016 at 04:49 PM
+-- Generation Time: Aug 26, 2016 at 04:39 PM
 -- Server version: 10.1.16-MariaDB-1~precise
 -- PHP Version: 7.0.10-1+deb.sury.org~precise+1
 
@@ -19,44 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `mc_cms_mobile`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `blog`
---
-
-CREATE TABLE `blog` (
-  `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `content` text NOT NULL,
-  `image` varchar(200) NOT NULL,
-  `date_created` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `blog`
---
-
-INSERT INTO `blog` (`id`, `title`, `content`, `image`, `date_created`) VALUES
-(1, 'Tutorial Membuat index.php', 'Content itself is what the end-user derives value from. Thus, "content" can refer to the information provided through the medium, the way in which the information was presented, as well as the added features included in the medium in which that information was delivered. The medium however, provides little to no value to the end-user without the information and experiences that make up the content. Communication theory philosopher Marshall McLuhan famously coined the phrase, "The medium is the message."[3] In the case of content, the channel through which information is delivered, the "medium", affects how the end user perceives content, the "message".', '', '2016-07-09 06:23:11'),
-(2, 'Ciri-ciri Blogger sukses', 'berikut ini cara untuk menjadi loger sukses, cekidot yaa....', '', '2016-07-09 11:20:37'),
-(3, 'Membuat htacess security', 'The author, producer, or publisher of an original source of information or experiences may or may not be directly responsible for the entire value that they attain as content in a specific context. For example, part of an original article (such as a headline from a news story) may be rendered on another web page displaying the results of a user\'s search engine query grouped with headlines from other news publications and related advertisements. The value that the original headline has in this group of query results from the search engine as a medium may be very different from the value that it had as message content in its original article.\n\nContent also leads to influencing other people in creating their own content, sometimes in a way that the original author didn\'t or couldn\'t plan or imagine. This feature adding the option of user innovation in a medium means users can develop their own content from existing content.', 'https://cdn4.iconfinder.com/data/icons/BRILLIANT/networking/png/400/headphone.png', '2016-07-09 06:23:11'),
-(4, 'What is bloger', 'berikut ini cara untuk menjadi loger sukses, cekidot yaa....Blogger is a blog-publishing service that allows multi-user blogs with time-stamped entries. It was developed by Pyra Labs, which was bought by Google in 2003. Generally, the blogs are hosted by Google at a subdomain of blogspot.com. Blogs can also be hosted in the registered custom domain of the blogger (like www.example.com).[4] A user can have up to 100 blogs per account.[5]\n\nUp until May 1, 2010, Blogger allowed users to publish blogs on other hosts, via FTP. All such blogs had (or still have) to be moved to Google\'s own servers, with domains other than blogspot.com allowed via custom URLs.[6] Unlike WordPress.com, Blogger allows its users to use their own domain free of charge, while WordPress.com charges around $13 to use a custom domain.[7] Blogger cannot be installed on a web server. One has to use DNS facilities to redirect a custom URL to a blogspot domain.', '', '2016-07-09 11:20:37'),
-(5, 'Tutorial membuat CRUD Android dengan Android Studio', 'Traditionally, content was edited and tailored for the public through news editors, authors, and other kinds of content creators. However, not all information content requires creative authoring or editing. Through recent technological developments, truth is found in philosopher Marshall McLuhan\'s idea of a global village; new technologies allow for instantaneous movement of information from every corner to every point at the same time[4] has caused the globe to be contracted into a village by electric technology,[5] such as mobile phones and automated sensors. These new technologies can record events anywhere for publishing and converting in order to potentially reach a global audience on channels such as YouTube. Such recorded or transmitted information and visuals can be referred to as content. Content is no longer a product of only reputable sources; new technology has made primary sources of content more readily available to all. For example, a video of a politician giving a speech compared to an article written by a reporter who witnessed the speech.', 'https://cdn4.iconfinder.com/data/icons/BRILLIANT/networking/png/400/headphone.png', '2016-07-09 06:23:11'),
-(6, 'Pemograman PHP idaman', 'cara membuat index.php pertama-tama perlu mengerti bla bla bla..............', '', '2016-07-09 06:23:11'),
-(7, 'Ipa luar biasa sekali', 'While marketing and media interests have broadly adopted the term "content", some writers complain about the term\'s inherent ambiguity.[6][7] Others assert that the term devalues the work of authors,[8][9] and still others argue that it overemphasizes the work of authors.[10]', '', '2016-07-09 06:23:11'),
-(8, 'Cara membuat kontent', 'Media production and delivery technology may potentially enhance the value of content by formatting, filtering, and combining original sources of content for new audiences with new contexts. The greatest value for a given source of content for a specific audience is often found through such electronic reworking of content as dynamic and real-time as the trends that fuel its interest. Less emphasis on value from content stored for possible use in its original form, and more emphasis on rapid re-purposing, reuse, and redeployment has led many publishers and media producers to view their primary function less as originators and more as transformers of content. Thus, one finds out that institutions, that used to focus on publishing printed materials, are now publishing both databases and software to combine content from various sources for a wider-variety of audiences.', '', '2016-07-09 06:23:11'),
-(9, 'Menghitung Jumlah String atau Karakter', 'Menghitung jumlah string atau karakter yang terdapat pada suatu variabel menggunakan fungsi strlen(). Dengan fungsi ini kita bisa mengetahui jumlah karakter pada suatu kata atau kalimat, dihitung termasuk spasi kosong.\nSintaksnya adalah : strlen (string $string);\nstring adalah modus yang akan dihitung panjangnya atau jumlah karakternya.\nContoh script:\n<?PHP\n$kalimat1=”Saya sedang makan”;\n$kalimat2=”Sayasedangmakan”;\n$hasil1=strlen($kalimat1);\n$hasil2=strlen($kalimat2);\necho “Jumlah karakter 1: $kalimat1”;\necho “Jumlah karakter 2: $kalimat2”;\n?>\nHasil dari run script tersebut adalah:\nJumlah karakter 1: 17\nJumlah karakter 2: 15', 'hththt', '2016-07-11 00:00:00'),
-(10, 'blog 1', 'Content itself is what the end-user derives value from. Thus, "content" can refer to the information provided through the medium, the way in which the information was presented, as well as the added features included in the medium in which that information was delivered. The medium however, provides little to no value to the end-user without the information and experiences that make up the content. Communication theory philosopher Marshall McLuhan famously coined the phrase, "The medium is the message."[3] In the case of content, the channel through which information is delivered, the "medium", affects how the end user perceives content, the "message".', '', '2016-07-09 06:23:11'),
-(11, 'blog 2', 'berikut ini cara untuk menjadi loger sukses, cekidot yaa....', '', '2016-07-09 11:20:37'),
-(12, 'blog 3', 'The author, producer, or publisher of an original source of information or experiences may or may not be directly responsible for the entire value that they attain as content in a specific context. For example, part of an original article (such as a headline from a news story) may be rendered on another web page displaying the results of a user\'s search engine query grouped with headlines from other news publications and related advertisements. The value that the original headline has in this group of query results from the search engine as a medium may be very different from the value that it had as message content in its original article.\r\n\r\nContent also leads to influencing other people in creating their own content, sometimes in a way that the original author didn\'t or couldn\'t plan or imagine. This feature adding the option of user innovation in a medium means users can develop their own content from existing content.', '', '2016-07-09 06:23:11'),
-(13, 'blog 4', 'berikut ini cara untuk menjadi loger sukses, cekidot yaa....Blogger is a blog-publishing service that allows multi-user blogs with time-stamped entries. It was developed by Pyra Labs, which was bought by Google in 2003. Generally, the blogs are hosted by Google at a subdomain of blogspot.com. Blogs can also be hosted in the registered custom domain of the blogger (like www.example.com).[4] A user can have up to 100 blogs per account.[5]\r\n\r\nUp until May 1, 2010, Blogger allowed users to publish blogs on other hosts, via FTP. All such blogs had (or still have) to be moved to Google\'s own servers, with domains other than blogspot.com allowed via custom URLs.[6] Unlike WordPress.com, Blogger allows its users to use their own domain free of charge, while WordPress.com charges around $13 to use a custom domain.[7] Blogger cannot be installed on a web server. One has to use DNS facilities to redirect a custom URL to a blogspot domain.', '', '2016-07-09 11:20:37'),
-(14, 'blog 5', 'Traditionally, content was edited and tailored for the public through news editors, authors, and other kinds of content creators. However, not all information content requires creative authoring or editing. Through recent technological developments, truth is found in philosopher Marshall McLuhan\'s idea of a global village; new technologies allow for instantaneous movement of information from every corner to every point at the same time[4] has caused the globe to be contracted into a village by electric technology,[5] such as mobile phones and automated sensors. These new technologies can record events anywhere for publishing and converting in order to potentially reach a global audience on channels such as YouTube. Such recorded or transmitted information and visuals can be referred to as content. Content is no longer a product of only reputable sources; new technology has made primary sources of content more readily available to all. For example, a video of a politician giving a speech compared to an article written by a reporter who witnessed the speech.', 'https://cdn4.iconfinder.com/data/icons/BRILLIANT/networking/png/400/headphone.png', '2016-07-09 06:23:11'),
-(15, 'blog 6', 'cara membuat index.php pertama-tama perlu mengerti bla bla bla..............', 'https://cdn4.iconfinder.com/data/icons/BRILLIANT/networking/png/400/headphone.png', '2016-07-09 06:23:11'),
-(16, 'blog 7 ', 'While marketing and media interests have broadly adopted the term "content", some writers complain about the term\'s inherent ambiguity.[6][7] Others assert that the term devalues the work of authors,[8][9] and still others argue that it overemphasizes the work of authors.[10]', 'http://icons.iconarchive.com/icons/iconshock/hitchhikers-guide/256/Marvin-icon.png', '2016-07-09 06:23:11'),
-(17, 'blog 8', 'Media production and delivery technology may potentially enhance the value of content by formatting, filtering, and combining original sources of content for new audiences with new contexts. The greatest value for a given source of content for a specific audience is often found through such electronic reworking of content as dynamic and real-time as the trends that fuel its interest. Less emphasis on value from content stored for possible use in its original form, and more emphasis on rapid re-purposing, reuse, and redeployment has led many publishers and media producers to view their primary function less as originators and more as transformers of content. Thus, one finds out that institutions, that used to focus on publishing printed materials, are now publishing both databases and software to combine content from various sources for a wider-variety of audiences.', 'http://image.flaticon.com/teams/1-freepik.jpg', '2016-07-09 06:23:11'),
-(18, 'Menghitung Jumlah String atau Karakter', 'Menghitung jumlah string atau karakter yang terdapat pada suatu variabel menggunakan fungsi strlen(). Dengan fungsi ini kita bisa mengetahui jumlah karakter pada suatu kata atau kalimat, dihitung termasuk spasi kosong.\r\nSintaksnya adalah : strlen (string $string);\r\nstring adalah modus yang akan dihitung panjangnya atau jumlah karakternya.\r\nContoh script:\r\n<?PHP\r\n$kalimat1=”Saya sedang makan”;\r\n$kalimat2=”Sayasedangmakan”;\r\n$hasil1=strlen($kalimat1);\r\n$hasil2=strlen($kalimat2);\r\necho “Jumlah karakter 1: $kalimat1”;\r\necho “Jumlah karakter 2: $kalimat2”;\r\n?>\r\nHasil dari run script tersebut adalah:\r\nJumlah karakter 1: 17\r\nJumlah karakter 2: 15', 'http://www.freeiconspng.com/uploads/sweet-android-icon-png-4.png', '2016-07-11 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -78,6 +40,31 @@ CREATE TABLE `mcf_category` (
 INSERT INTO `mcf_category` (`id`, `slug`, `displayText`, `description`) VALUES
 (27, 'php', 'PHP', NULL),
 (28, 'android', 'Android', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mcf_page`
+--
+
+CREATE TABLE `mcf_page` (
+  `id` int(11) NOT NULL,
+  `author` int(11) DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `content` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `layout` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `createdAt` datetime NOT NULL,
+  `updateAt` datetime DEFAULT NULL,
+  `status` smallint(6) NOT NULL,
+  `slug` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `mcf_page`
+--
+
+INSERT INTO `mcf_page` (`id`, `author`, `title`, `content`, `layout`, `createdAt`, `updateAt`, `status`, `slug`) VALUES
+(14, 25, 'titleForTest', 'write content for test', 'default', '2016-07-20 10:20:08', NULL, 1, 'titlefortest');
 
 -- --------------------------------------------------------
 
@@ -136,51 +123,57 @@ INSERT INTO `mcf_post_categories` (`post_id`, `category_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `page`
+-- Table structure for table `mcf_user`
 --
 
-CREATE TABLE `page` (
+CREATE TABLE `mcf_user` (
   `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `content` text NOT NULL,
-  `date_created` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
+  `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `enabled` tinyint(1) NOT NULL,
+  `salt` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `last_login` datetime DEFAULT NULL,
+  `locked` tinyint(1) NOT NULL,
+  `expired` tinyint(1) NOT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  `confirmation_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `password_requested_at` datetime DEFAULT NULL,
+  `credentials_expired` tinyint(1) NOT NULL,
+  `credentials_expire_at` datetime DEFAULT NULL,
+  `realname` varchar(150) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `url` varchar(150) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `bio` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `avatar` varchar(500) COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Table structure for table `user`
+-- Dumping data for table `mcf_user`
 --
 
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `username`, `password`, `name`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Admin');
+INSERT INTO `mcf_user` (`id`, `username`, `email`, `enabled`, `salt`, `password`, `last_login`, `locked`, `expired`, `expires_at`, `confirmation_token`, `password_requested_at`, `credentials_expired`, `credentials_expire_at`, `realname`, `url`, `bio`, `avatar`) VALUES
+(25, 'admin', 'admin@Creasindo.org', 1, 'rawj8al3eb4occw0c4ss8sg4g8ggwc4', '21232f297a57a5a743894a0e4a801fc3', '2016-08-16 08:27:13', 0, 0, NULL, NULL, NULL, 0, NULL, 'admin', NULL, NULL, '/files/images/avatar/avatar_male.png'),
+(26, 'mcadmin', 'mcadmin@mcreasindo.com', 1, 'r5te08tf35co08co80ws0gkko4w4ggs', '$2y$13$bKjBrKyEtcMa5kt9KXg8ruPmEh5xLFaJbttBPiRykIKly9gPUAHda', '2016-08-16 07:43:51', 0, 0, NULL, NULL, NULL, 0, NULL, 'mcadmin', NULL, NULL, '/files/images/avatar/avatar_male.png'),
+(27, 'hikmahtiar6', 'hikmahtiar28061996@gmail.com', 0, '', 'cf60feaff1181cab25caffa7053b44ab', NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 'Hikmahtiar', NULL, NULL, NULL),
+(28, 'hikmahtiar6', 'hikmahtiar28061996@gmail.com', 1, '', 'c4ca4238a0b923820dcc509a6f75849b', NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 'Hikmahtiar', NULL, NULL, NULL),
+(29, 'aa', 'hikmahtiar6@gmail.com', 1, '', '4124bc0a9335c27f086f24ba207a4912', NULL, 0, 0, NULL, NULL, NULL, 0, NULL, 'aa', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `blog`
---
-ALTER TABLE `blog`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `mcf_category`
 --
 ALTER TABLE `mcf_category`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mcf_page`
+--
+ALTER TABLE `mcf_page`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `IDX_C532E11ABDAFD8C8` (`author`);
 
 --
 -- Indexes for table `mcf_post`
@@ -198,15 +191,9 @@ ALTER TABLE `mcf_post_categories`
   ADD KEY `IDX_D7D8D54812469DE2` (`category_id`);
 
 --
--- Indexes for table `page`
+-- Indexes for table `mcf_user`
 --
-ALTER TABLE `page`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `user`
---
-ALTER TABLE `user`
+ALTER TABLE `mcf_user`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -214,33 +201,34 @@ ALTER TABLE `user`
 --
 
 --
--- AUTO_INCREMENT for table `blog`
---
-ALTER TABLE `blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
---
 -- AUTO_INCREMENT for table `mcf_category`
 --
 ALTER TABLE `mcf_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+--
+-- AUTO_INCREMENT for table `mcf_page`
+--
+ALTER TABLE `mcf_page`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `mcf_post`
 --
 ALTER TABLE `mcf_post`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT for table `page`
+-- AUTO_INCREMENT for table `mcf_user`
 --
-ALTER TABLE `page`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `mcf_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- Constraints for dumped tables
 --
+
+--
+-- Constraints for table `mcf_page`
+--
+ALTER TABLE `mcf_page`
+  ADD CONSTRAINT `FK_C532E11ABDAFD8C8` FOREIGN KEY (`author`) REFERENCES `mcf_user` (`id`);
 
 --
 -- Constraints for table `mcf_post_categories`

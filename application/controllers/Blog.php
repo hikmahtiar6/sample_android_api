@@ -30,4 +30,12 @@ class Blog extends CI_Controller {
         ->set_content_type('application/json')
         ->set_output(json_encode($response));
     }
+    
+    /**
+     * tambah blog
+     */
+    public function add()
+    {
+        $this->load->view('blog/add');
+    }
 }
