@@ -37,7 +37,7 @@ class Register extends CI_Controller {
             if($check_user)
             {
                 $response = [
-                    "message" => "Username telah digunakan.",
+                    "message" => "Username ".$username." telah digunakan.",
                     "status"  => "error"
                 ];
             }

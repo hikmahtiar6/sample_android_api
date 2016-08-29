@@ -15,8 +15,7 @@ class Login_model extends CI_Model {
         $sql = $this->db;
         $sql->select('*');
         $sql->from(static::TABLE);
-        $sql->where('username', $username);
-        $sql->where('password', md5($password));
+        $sql->where("(username =  '".$username."' or email = '".$username."') and password = '".md5($password)."'");
         $get = $sql->get();
         $result = $get->row();
         

@@ -18,9 +18,14 @@ class Blog extends CI_Controller {
         {
             foreach($data as $row)
             {
+                $content = strip_tags($row->content);
                 $new_data[] = [
-                    'title'  => $row->title,
-                    'author' => $row->id, 
+                    'author'     => $row->id, 
+                    'title'      => $row->title,
+                    'created_at' => $row->createdAt,
+                    'updated_at' => $row->updatedAt,
+                    'content'    => (strlen($content) <= 97) ? $content : substr($content, 0, 97).'...',
+                    'image'      => $row->featuredImage
                 ];
             }        
         }

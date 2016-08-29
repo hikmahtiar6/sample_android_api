@@ -4,7 +4,7 @@
  * @author Hikmahtiar hikmahtiar.cool@gmail.com>
  */
 class Blog_model extends CI_Model {
-    const TABLE = 'blog';
+    const TABLE = 'mcf_post';
     
     public function __construct()
     {
@@ -17,7 +17,7 @@ class Blog_model extends CI_Model {
         $sql->select('*');
         $sql->from(static::TABLE);
         $sql->limit($limit, $offset);
-        $sql->order_by('date_created', 'DESC');
+        $sql->order_by('createdAt', 'DESC');
         
         $get = $sql->get();
         $result = $get->result();
@@ -27,11 +27,13 @@ class Blog_model extends CI_Model {
     
     public function save(Array $data)
     {
-        
+        return $this->db->insert(static::TABLE,  $data);
     }
     
     public function update($id, Array $data)
     {
-        
+        $sql = $this->db;
+        $sql->where('id', $id);
+        return $this->db->update(static::TABLE,  $data);
     }
 }
