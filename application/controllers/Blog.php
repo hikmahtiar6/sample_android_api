@@ -20,12 +20,14 @@ class Blog extends CI_Controller {
             {
                 $content = strip_tags($row->content);
                 $new_data[] = [
-                    'author'     => $row->id, 
+                    'id'        => $row->id,
+                    'author'     => $row->author + "sample", 
                     'title'      => $row->title,
-                    'created_at' => $row->createdAt,
-                    'updated_at' => $row->updatedAt,
+                    'date_created' => $row->createdAt,
+                    'date_updated' => $row->updatedAt,
                     'content'    => (strlen($content) <= 97) ? $content : substr($content, 0, 97).'...',
-                    'image'      => $row->featuredImage
+                    'content_detail' => strip_tags(htmlentities($content)),
+                    'image'      => ($row->featuredImage) ? $row->featuredImage : $this->get_first_image_url($content) 
                 ];
             }        
         }
@@ -34,6 +36,23 @@ class Blog extends CI_Controller {
         $this->output
         ->set_content_type('application/json')
         ->set_output(json_encode($response));
+    }
+    
+    public function get_first_image_url($data, $default_url = null) 
+    {
+
+        // Matched with `![alt text](IMAGE URL)` from Markdown file
+        if(preg_match_all('/\!\[.*?\]\((.*?)\)/', $data, $matches)) 
+        {
+            return $matches[1][0];
+        }
+
+        if(preg_match_all('/<img (.*?)?src=(\'|\")(.*?)(\'|\")(.*?)? ?\/?>/i', $data, $matches)) 
+        {
+            return $matches[3][0];
+        }
+
+        return $default_url; // Default image URL if nothing matched
     }
     
     /**
