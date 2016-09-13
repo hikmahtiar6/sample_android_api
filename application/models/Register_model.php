@@ -10,13 +10,13 @@ class Register_model extends CI_Model {
         parent::__construct();
     }
     
-    public function check_user($username)
+    public function check_user($field, $value)
     {
         $sql = $this->db;
         
         $sql->select('*');
         $sql->from(static::TABLE);
-        $sql->where('username', $username);
+        $sql->where($field, $value);
         
         $get = $sql->get();
         $result = $get->row();

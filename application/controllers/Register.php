@@ -33,21 +33,33 @@ class Register extends CI_Controller {
                 'password' => md5($pass),
                 'enabled'  => 1,
             ];
-            $check_user = $model->check_user($username);
+            $check_user = $model->check_user('email', $email);
             if($check_user)
             {
                 $response = [
-                    "message" => "Username ".$username." telah digunakan.",
+                    "message" => "Email ".$email." telah digunakan.",
                     "status"  => "error"
                 ];
             }
             else
             {
-                $model->save($data);
-                $response = [
-                    "message" => "Anda berhasil melakukan registrasi.",
-                    "status"  => "success"
-                ];
+                $check_user2 = $model->check_user('username', $username);
+                if($check_user2)
+                {
+                    $response = [
+                        "message" => "Username ".$username." telah digunakan.",
+                        "status"  => "error"
+                    ];
+                }
+                else
+                {
+                    $model->save($data);
+                    $response = [
+                        "message" => "Anda berhasil melakukan registrasi. Anda akan login automatis",
+                        "status"  => "success"
+                    ];
+                }
+
             }
         }
         else
